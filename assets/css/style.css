@@ -1,0 +1,14 @@
+* {
+  font-family: Helvetica;
+}
+
+body {
+  width: 960px;
+  background-color: #ddd;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}

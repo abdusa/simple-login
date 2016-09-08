@@ -1,0 +1,34 @@
+{
+  "name": "simple-login",
+  "version": "1.0.0",
+  "description": "Simple login interaction",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdusa/simple-login.git"
+  },
+  "keywords": [
+    "html",
+    "js",
+    "css",
+    "ui",
+    "interaction",
+    "ux"
+  ],
+  "author": "abdusa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abdusa/simple-login/issues"
+  },
+  "homepage": "https://github.com/abdusa/simple-login#readme",
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2"
+  }
+}
