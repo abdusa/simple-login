@@ -1,21 +1,20 @@
-var gulp = require('gulp'),
-		browserSync = require('browser-sync'),
-		sass = require('gulp-sass'),
-		plumber = require('gulp-plumber'),
-		prefix = require('gulp-autoprefixer');
+var gulp 						= require('gulp'),
+		browserSync 		= require('browser-sync'),
+		sass 						= require('gulp-sass'),
+		plumber 				= require('gulp-plumber'),
+		prefix 					= require('gulp-autoprefixer');
 
 
 gulp.task('sync', ['sass'], function(){
 	console.log('Starting Browser Sync ...');
-	browserSync({
+	browserSync.init({
 		server: {
 			baseDir: './',
 			index: 'index.html'
 		},
-		open: 'local',
 		notify: false
 	});
-	gulp.watch('./index.html', browserSync.reload);
+	gulp.watch('./index.html', ['reload']);
 	gulp.watch('assets/css/style.sass', ['sass']);
 });
 
@@ -28,5 +27,9 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('./assets/css'))
     .pipe(browserSync.stream());
 });
+
+gulp.task('reload', () => {
+	browserSync.reload();
+})
 
 gulp.task('default', ['sync']);
